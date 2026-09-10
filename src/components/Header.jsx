@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { whatsappHref } from '../constants/whatsapp';  //link do WhatsApp
 //links de navegação do header, cada link tem um label e um href correspondente
 const navLinks = [
   { label: 'Sobre', href: '#sobre' },
@@ -6,10 +7,7 @@ const navLinks = [
   { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'FAQ', href: '#faq' },
 ];
-//variaveis para o link do WhatsApp, incluindo o número e a mensagem pré-definida
-const whatsappNumber = '5532988156599';
-const whatsappMessage = 'Olá! Conheci o curso pelo site e gostaria de receber mais informações.';
-const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
 //componente Header que renderiza o cabeçalho da página, incluindo o logo,
 //  a navegação e o botão do WhatsApp
 export default function Header() {
