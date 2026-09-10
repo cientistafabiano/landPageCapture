@@ -1,1 +1,8 @@
 @import "tailwindcss";
+/* nomes semânticos das cores issue 2 buscando as cores no site da codi*/
+@theme {
+  --color-primary: #720eec;
+  --color-primary-light: #a243d2;
+  --color-accent: #d55521;
+  --color-dark: #131836;
+}
