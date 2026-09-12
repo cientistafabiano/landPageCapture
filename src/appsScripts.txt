@@ -1,0 +1,45 @@
+
+ - Crie uma planilha nova no Google Sheets.
+ - Na primeira linha, adicione os cabeçalhos das colunas, exatamente nessa ordem: Data/Hora, Nome, Telefone, E-mail, Curso de Interesse.
+ - Agora o script. No menu da planilha: Extensões → Apps Script. Isso abre um editor de código separado, já vinculado a essa planilha específica. Apague o conteúdo padrão e cole isto:
+
+ - doPost(e): esse nome de função é uma convenção obrigatória do Apps Script — quando o Web App recebe uma requisição do tipo POST (que é o que o formulário vai enviar na issue #11), ele automaticamente executa a função chamada exatamente doPost. Se você chamasse a função de outro nome, o Apps Script não saberia que é ela quem deve rodar.
+ - SpreadsheetApp.getActiveSpreadsheet().getActiveSheet(): pega a planilha e a aba onde esse script está "morando" (por isso ele foi aberto de dentro da própria planilha — o script já sabe qual é a planilha certa, sem você precisar informar um ID ou link).
+ - e.postData.contents: e é o "evento" da requisição recebida — postData.contents é o corpo bruto que foi enviado (o formulário vai mandar isso como um texto em formato JSON). JSON.parse transforma esse texto de volta num objeto JavaScript de verdade, pra você conseguir acessar dados.nome, dados.email, etc.
+ - appendRow([...]): adiciona uma linha nova no final da planilha, na mesma ordem das colunas que você criou — por isso a ordem dos cabeçalhos importa, ela precisa bater com a ordem dos valores aqui.
+ - ContentService.createTextOutput(...): monta a resposta que volta pro navegador confirmando que deu certo — isso é só uma boa prática, o formulário nem sempre vai conseguir ler essa resposta (explico o motivo abaixo).
+
+ - Clique em Deploy → New deployment
+        No editor do Apps Script, clique no botão azul "Deploy" (canto superior direito) e escolha "New deployment".
+
+ - Selecione o tipo "Web app"
+        Ao lado de "Select type", clique no ícone de engrenagem e escolha "Web app".
+
+ - Configure "Execute as: Me" e "Who has access: Anyone"
+        Em "Execute as", deixe "Me" (sua conta Google) — é sua conta que vai ter permissão de escrever na planilha, não quem preencher o formulário. Em "Who has access", selecione "Anyone" — sem isso, só você mesmo conseguiria enviar dados, o formulário público da landing page seria bloqueado.
+
+ - Autorize o acesso
+        O Google vai pedir autorização pra esse script acessar sua planilha — é esperado, só confirme com sua conta Google. Ele pode mostrar um aviso de "app não verificado" (porque é um script seu, não publicado na loja do Google) — clique em "Avançado" e depois em "Acessar (nome do projeto), não seguro" pra prosseguir. É seguro porque é código que você mesmo escreveu.
+
+ - Copie a URL do Web App
+        Depois de deployado, o Google mostra uma URL longa terminando em `/exec`. **Copie e guarde essa URL** — ela vai ser usada no formulário da issue #11 pra enviar os dados pra cá.
+  URL: https://script.google.com/macros/s/AKfycbxZkOt_5WtpeV8fhO00WLuaNE7UEOFES4xtDN04SLJ64-RPJXJQwfGeddgoWit6uaeSyw/exec
+
+ - Testar o envio manual de um registro de teste:
+    - Abra qualquer (mas que esteja fazendo algo) aba do navegador, aperte F12 (ou Ctrl+Shift+I) pra abrir o DevTools, vá na aba Console.
+    - Cole isto, substituindo SUA_URL_AQUI pela URL do seu Web App:
+        obs: no console não aceita colar entao escreva isso: "allow pasting"; depois ele libera o acesso.
+        fetch('SUA_URL_AQUI', {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify({
+                nome: 'Teste Manual',
+                telefone: '32999999999',
+                email: 'teste@teste.com',
+                curso: 'Full Stack',
+            }),
+            });
+    - enter: ira salvar na planilha
+    - Sobre o mode: 'no-cors': é o mesmo aviso que te dei antes — com ele, o navegador não vai te mostrar nenhuma resposta de sucesso ou erro no console (parece que "não aconteceu nada"), mas os dados são enviados mesmo assim. A única forma de confirmar que funcionou é olhando a planilha diretamente, não o console.
+    
+
