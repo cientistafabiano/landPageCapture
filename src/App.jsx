@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Sobre from "./components/Sobre";
+import OQueVaiAprender from "./components/OQueVaiAprender";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         {/* Conteúdo principal da página */}
         <Hero />
         <Sobre />
+        <OQueVaiAprender />
       </main>
     </div>
   );
