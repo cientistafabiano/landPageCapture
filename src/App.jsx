@@ -6,12 +6,15 @@ import Diferenciais from "./components/Diferenciais";
 import Depoimentos from "./components/Depoimentos";
 import Formulario from "./components/Formulario";
 import Faq from "./components/Faq";
+import CtaFinal from "./components/CtaFinal";
+import Footer from "./components/Footer";
+import BotaoFlutuanteWhatsapp from "./components/BotaoFlutuanteWhatsapp";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Header />
-      
+      {/*Cabeçalho fixo */}
+      <Header />      
       <main>
         {/* Conteúdo principal da página */}
         <Hero />
@@ -21,6 +24,9 @@ function App() {
         <Depoimentos />
         <Formulario />
         <Faq />
+        <CtaFinal />
+        <Footer />
+        <BotaoFlutuanteWhatsapp />
       </main>
     </div>
   );
