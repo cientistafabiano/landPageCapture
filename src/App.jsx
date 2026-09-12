@@ -5,6 +5,7 @@ import OQueVaiAprender from "./components/OQueVaiAprender";
 import Diferenciais from "./components/Diferenciais";
 import Depoimentos from "./components/Depoimentos";
 import Formulario from "./components/Formulario";
+import Faq from "./components/Faq";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Diferenciais />
         <Depoimentos />
         <Formulario />
+        <Faq />
       </main>
     </div>
   );
