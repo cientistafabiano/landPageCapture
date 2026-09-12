@@ -42,3 +42,27 @@ export default function Hero() {
     </section>
   );
 }
+
+/*
+ - id="top": é o destino do link "Codi Academy" (logo) no Header, 
+que aponta pra #top — sem esse id na seção certa,
+aquele link não levaria a lugar nenhum.
+ - order-first md:order-last: no wireframe, você definiu que no
+mobile o texto vem antes da imagem, mas no desktop a imagem fica
+ao lado (à direita). Em vez de duplicar o HTML pra cada tela,
+essas duas classes reordenam visualmente o mesmo bloco — no mobile
+ele aparece primeiro (mesmo estando depois no código),
+no desktop ele volta pra última posição (a grid-cols-2 cuida do lado a lado).
+A imagem é só um placeholder (bg-gradient-to-br from-primary to-primary-light)
+— um bloco com gradiente das suas próprias cores de marca, 
+só pra não deixar vazio enquanto você não tem a imagem/ilustração final.
+Troque por uma tag <img> quando tiver o material.
+ - text-dark/80: o /80 reduz a opacidade da cor dark pra 80% — 
+um recurso do Tailwind pra criar uma variação mais suave da mesma
+cor (útil pro parágrafo, que não precisa ser tão escuro/pesado 
+quanto o título) sem precisar definir uma cor nova no tema.
+O CTA secundário não usa a cor accent como fundo — decidi deixar
+como contorno neutro que só fica laranja no hover, 
+pra não competir visualmente com o CTA principal (roxo, sólido).
+Duas cores de destaque com o mesmo peso visual dividem a atenção de quem está vendo a página.
+*/
