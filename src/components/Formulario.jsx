@@ -96,6 +96,7 @@ export default function Formulario() {
             <label htmlFor="curso" className="block text-sm font-medium text-dark">
               Curso de interesse
             </label>
+            
             <select
               id="curso"
               name="curso"
@@ -103,7 +104,15 @@ export default function Formulario() {
               onChange={handleChange}
               className="mt-1 w-full rounded-lg border border-dark/20 px-4 py-2 focus:border-primary focus:outline-none"
             >
-              <option value="Full Stack">Full Stack</option>
+              <option value="Desenvolvedor Web Fullstack">Desenvolvedor Web Fullstack</option>
+              <option value="IA Developer">IA Developer - Inteligência Artificial Aplicada</option>
+              <option value="Desenvolvimento Web Backend">Desenvolvimento Web Backend</option>
+              <option value="Desenvolvimento Web Frontend">Desenvolvimento Web Frontend</option>
+              <option value="JavaScript Avançado">Curso de JavaScript Avançado</option>
+              <option value="Data Science">Programador Data Science</option>
+              <option value="Informática e Tecnologias Digitais">Curso de Informática e Tecnologias Digitais</option>
+              <option value="Git & GitHub">Fundamentos Git & GitHub</option>
+              <option value="AWS Cloud Practitioner">Preparatório AWS Certified Cloud Practitioner</option>            
             </select>
           </div>
 

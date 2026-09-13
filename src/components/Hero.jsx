@@ -1,4 +1,5 @@
 import { whatsappHref } from '../constants/whatsapp'; //link do WhatsApp
+import ilustracao_hero from '../assets/ilustracao_hero.svg'; //imagem do Hero
 
 export default function Hero() {
   return (
@@ -36,7 +37,7 @@ export default function Hero() {
 
         {/* Imagem — placeholder até você ter a imagem real */}
         <div className="order-first md:order-last">
-          <div className="aspect-4/3 w-full rounded-2xl bg-linear-to-br from-primary to-primary-light" />
+          <img src={ilustracao_hero} alt="Ilustração de um desenvolvedor programando" className="w-full" />
         </div>
       </div>
     </section>
@@ -65,4 +66,6 @@ O CTA secundário não usa a cor accent como fundo — decidi deixar
 como contorno neutro que só fica laranja no hover, 
 pra não competir visualmente com o CTA principal (roxo, sólido).
 Duas cores de destaque com o mesmo peso visual dividem a atenção de quem está vendo a página.
+ - era temporario <div className="aspect-4/3 w-full rounded-2xl bg-linear-to-br from-primary to-primary-light" />
+       
 */

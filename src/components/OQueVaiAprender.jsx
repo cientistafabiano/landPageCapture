@@ -1,19 +1,19 @@
 const topicos = [
   {
-    titulo: 'Front-end',
-    descricao: 'HTML, CSS e JavaScript para construir interfaces que o usuário vê e interage.',
+    titulo: 'Frontend Moderno',
+    descricao: 'Construa interfaces incríveis com HTML, CSS, JavaScript, React e Tailwind CSS.',
   },
   {
-    titulo: 'Back-end',
-    descricao: 'Lógica de servidor, APIs e regras de negócio por trás da aplicação.',
+    titulo: 'Backend Poderoso',
+    descricao: 'Domine Node.js, Python, PHP e C#, criando APIs, banco de dados e lógica de negócios eficiente.',
   },
   {
-    titulo: 'Banco de Dados',
-    descricao: 'Modelagem e consultas para armazenar e organizar as informações da aplicação.',
+    titulo: 'Integração Total',
+    descricao: 'Trabalhe com aplicações completas, conectando frontend e backend para entregar soluções reais e escaláveis.',
   },
   {
-    titulo: 'Projetos Reais',
-    descricao: 'Construção de projetos completos, do planejamento à entrega, como no mercado de trabalho.',
+    titulo: 'Outras Tecnologias-Chave',
+    descricao: 'Explore SQL, MongoDB, Git, entre outras ferramentas que são padrão no mercado.',
   },
 ];
 

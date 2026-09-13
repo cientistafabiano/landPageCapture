@@ -12,12 +12,12 @@ const perguntas = [
   {
     pergunta: 'Quais as formas de pagamento?',
     resposta:
-      '[A confirmar com a Codi Academy — detalhar formas de pagamento e parcelamento disponíveis antes de publicar.]',
+      'À vista, via PIX, dinheiro ou cartão de débito, ou parcelado em até 12x no cartão de crédito.',
   },
   {
     pergunta: 'Quanto tempo dura o curso?',
     resposta:
-      '[A confirmar com a Codi Academy — informar a carga horária/duração exata antes de publicar.]',
+      'Curso com duração de 1 ano e carga horária total de 360h.',
   },
 ];
 
