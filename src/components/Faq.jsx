@@ -12,7 +12,7 @@ const perguntas = [
   {
     pergunta: 'Quais as formas de pagamento?',
     resposta:
-      'À vista, via PIX, dinheiro ou cartão de débito, ou parcelado em até 12x no cartão de crédito.',
+      '* À vista, via PIX, dinheiro ou cartão de débito, ou parcelado em até 12x no cartão de crédito.',
   },
   {
     pergunta: 'Quanto tempo dura o curso?',
