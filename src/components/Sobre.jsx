@@ -33,13 +33,13 @@ export default function Sobre() {
         </div>
 
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-2xl border-1 border-accent p-6">
+          <div className="rounded-2xl border border-accent p-6">
             <h3 className="font-semibold text-dark">Presencial</h3>
             <p className="mt-2 text-sm text-dark/70">
               Aulas na unidade da Codi Academy em Juiz de Fora (MG), com professores ao vivo e turma reduzida.
             </p>
           </div>
-          <div className="rounded-2xl border-1 border-sucess p-6">
+          <div className="rounded-2xl border border-success p-6">
             <h3 className="font-semibold text-dark">Online</h3>
             <p className="mt-2 text-sm text-dark/70">
               Aulas ao vivo pela internet, com a mesma estrutura da turma presencial — de qualquer cidade do Brasil.
