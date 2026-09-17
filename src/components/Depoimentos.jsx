@@ -31,7 +31,7 @@ export default function Depoimentos() {
               key={index}
               className="w-[85%] shrink-0 snap-center rounded-2xl border border-dark/10 bg-white p-6 md:w-auto"
             >
-              <p className="text-dark/80">"{depoimento.texto}"</p>
+              <p className="text-dark/80 text-justify">"{depoimento.texto}"</p>
               <p className="mt-4 font-semibold text-dark">{depoimento.nome}</p>
               <p className="text-sm text-dark/60">{depoimento.tempo}</p>
             </div>
