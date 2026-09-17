@@ -1,19 +1,19 @@
 //carrosel sem precisar de nenhuma biblioteca JS.
 const depoimentos = [
   {
-    nome: '[Nome do ex-aluno]',
-    cargo: '[Cargo atual — a preencher]',
-    texto: '[Depoimento real a ser coletado com um ex-aluno da Codi Academy]',
+    nome: 'Pedro Paulo',
+    tempo: '5 meses',
+    texto: 'Entrei sem saber nada de programação e hoje já construo minhas próprias aplicações. O suporte dos professores faz toda a diferença.'
   },
   {
-    nome: '[Nome do ex-aluno]',
-    cargo: '[Cargo atual — a preencher]',
-    texto: '[Depoimento real a ser coletado com um ex-aluno da Codi Academy]',
+    nome: 'Fabiano Azedias',
+    tempo: '10 meses',
+    texto: 'O curso é intenso, mas cada projeto entregue me mostra o quanto já evoluí. Recomendo pra quem quer aprender na prática, não só na teoria.',
   },
   {
-    nome: '[Nome do ex-aluno]',
-    cargo: '[Cargo atual — a preencher]',
-    texto: '[Depoimento real a ser coletado com um ex-aluno da Codi Academy]',
+    nome: 'Ana Silva',
+    tempo: '9 meses',
+    texto: 'Achei que ia ser difícil conciliar com minha rotina, mas as aulas ao vivo e o acompanhamento próximo tornaram tudo mais leve.',
   },
 ];
 
@@ -33,7 +33,7 @@ export default function Depoimentos() {
             >
               <p className="text-dark/80">"{depoimento.texto}"</p>
               <p className="mt-4 font-semibold text-dark">{depoimento.nome}</p>
-              <p className="text-sm text-dark/60">{depoimento.cargo}</p>
+              <p className="text-sm text-dark/60">{depoimento.tempo}</p>
             </div>
           ))}
         </div>
