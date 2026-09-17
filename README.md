@@ -9,7 +9,7 @@
 - Com formulário para captação de clientes;
 - Dados armazenados em planilha;
 - Botão de WhatsApp;
-- Deploy em vercel;
+- Deploy em vercel - https://land-page-capture.vercel.app/
 
 
 
